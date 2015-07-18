@@ -3,7 +3,7 @@ Theme Name: Freifunk Community Template
 Theme URI: http://freifunk.net
 Description: based on default WordPress Theme
 Version: 0.8
-Author: Christian Heise & Monic Meisel
+Author: Christian Heise & Monic Meisel / Mods by Akuma & Lambda
 Author URI: http://christianhei.se/
 */
 
@@ -615,6 +615,68 @@ select {
 
 
 /* Begin Various Tags & Classes */
+div.nav-link {
+    max-width:700px;
+    min-with:300px;
+    margin-left:-21px;
+    margin-right:auto;
+    margin-top:7px;
+    
+}
+div.nav-link ul {
+    list-style: none outside none;
+    position: relative;
+    margin: 0px 5px 0px 0px;
+}
+
+div.nav-link ul li {
+    float:left;
+    line-height: 1.4em;
+    margin: 0px 5px 0px 0px;
+}
+
+div.nav-link ul li a {
+    float: none;
+    text-decoration: none;
+    display: inline-block;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    border-radius: 4px;
+
+    padding: 4px 14px;
+    margin-bottom: 0px;
+    border-color:#cecece;
+    color:#2f2f2f;
+    background-color:#f2f2f2;
+
+    font-family:sans-serif;
+    font-size:100%;
+    font-weight:600;
+}
+
+div.nav-link ul li a:focus
+{
+    text-decoration:underline;
+    border-color: #dc0067;
+    background-color:#dc0067;
+    
+}
+div.nav-link ul li a:hover {
+    text-decoration:underline;
+    color:#ffffff;
+    border-color: #e5287a;
+    background-color:#e5287a;
+}
+
+div.nav-link ul li a:active {
+    text-decoration:underline;
+    color:#ffffff;
+    border-color: #dc0067;
+    background-color:#dc0067;
+}
+
 acronym, abbr, span.caps {
 	cursor: help;
 	}
@@ -661,6 +723,7 @@ a img {
 	margin-top: 10px;
 	margin-bottom: 30px;
 	}
+
 /* End Various Tags & Classes*/
 
 

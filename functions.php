@@ -8,27 +8,35 @@
     add_filter('show_admin_bar', '__return_false');
 }
 
+
 load_theme_textdomain( 'kubrick' );
 
 add_theme_support( 'automatic-feed-links' );
+add_action ('init', 'register_my_menus');
+
+function register_my_menus() {
+  register_nav_menus(
+   array( 'header-menu' => __( 'Header Menu' ))
+  );
+}
 
 function the_breadcrumb() {
 	if (!is_home()) {
 		echo '<div class="ffbc"><a href="';
 		echo home_url();
 		echo '">';
-		bloginfo('name');
-		echo "</a> | ";
+#		bloginfo('name');
+		echo "</a> ";
 		if (is_category() || is_single()) {
 			// echo " Blog | ";
-			the_category(', ');
+		the_category(', ');
 			if (is_single()) {
-				echo " | ";
-				the_title();
+#				echo " | ";
+#				the_title();
 			}
 		} elseif (is_page()) {
 		
-    		echo the_title();
+#   		echo the_title();
 			
 		}
 			
