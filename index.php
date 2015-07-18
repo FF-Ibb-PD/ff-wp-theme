@@ -21,7 +21,7 @@ get_header(); ?>
 
 			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'kubrick'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
-				<small><?php the_time(__('F jS, Y', 'kubrick')) ?> von <?php the_author() ?></small>
+				<small><?php the_time(__('F jS, Y', 'kubrick')) ?></small>
 
 				<div class="entry">
 					<?php the_excerpt(__('Read the rest of this entry &raquo;', 'kubrick')); ?>
