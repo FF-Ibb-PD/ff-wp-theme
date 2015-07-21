@@ -38,8 +38,12 @@ if ( empty($withcomments) && !is_single() ) {
 
 <div id="header" role="banner">
 	<div class="header-back">
+		<?php do_action ('wp_menubar', 'header'); ?>
 		<div class="title"><a href="<?php bloginfo('url'); ?>"><?php  bloginfo('title'); ?></a></div>	
 		<div class="description"><?php  bloginfo('description'); ?></div>
+		
+		<div class="nav-link"><?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?></div>
+
 	</div>
 </div>
 <hr />
